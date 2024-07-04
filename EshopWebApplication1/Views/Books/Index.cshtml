@@ -1,0 +1,50 @@
+﻿@model List<Eshop.DomainEntities.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<h1 class="text-center">A simple bookstore</h1>
+<div class="d-flex justify-content-center">
+    <button class="btn btn-primary" type="submit">
+        <a class="text-white" style="text-decoration: none;" asp-action="Create">Create New</a>
+    </button>
+</div>
+
+    @for(int i=0;i<Model.Count();i++) {
+        var item = Model[i];
+
+    if (i % 3 == 0)
+    {
+    @:<div class="row">    
+    }
+
+       <div class="card mx-3" style="width: 20rem;">
+              <img class="card-img-top" src="@item.ImageUrl" height="400" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <h2 class="card-text">$@item.Price</h2>
+                <h4 class="card-text">@item.Author</h4>
+            <p class="card-text">@item.Description</p>
+            @if (item.Stock > 0)
+            {
+                <i class="card-text fa fa-check-circle mr-1 text-success text-fa"></i>
+                <span class="text-success">In stock</span>
+                <a href="/Books/AddToCart?id=@item.Id" class="btn btn-primary rounded-pill">Add to cart</a>
+            } else
+            {
+                <i class="card-text fa fa-times mr-1 text-danger text-fa"></i>
+                <span class="text-danger">Out of stock</span>
+                <button class="btn btn-primary rounded-pill" disabled>Add to cart</button>
+            }
+              </div>
+    </div>
+    if (i % 3 == 2)
+    {
+    @:</div>
+    
+    }
+}
