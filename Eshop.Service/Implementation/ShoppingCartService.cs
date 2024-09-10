@@ -97,7 +97,7 @@ namespace Eshop.Service.Implementation
                 Order order = new()
                 {
                     Id = Guid.NewGuid(),
-                    EshopApplicationUserId = Guid.Parse(userId)
+                    EshopApplicationUserId = userId
                 };
                 this._orderRepository.Insert(order);
 
