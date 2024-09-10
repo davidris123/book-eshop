@@ -3,7 +3,8 @@
     public class Order: BaseEntity
     {
 
-        public Guid EshopApplicationUserId { get; set; }
+        public string? EshopApplicationUserId { get; set; }
+        public EshopApplicationUser User { get; set; }
         public virtual List<BooksInOrder>? BooksInOrders { get; set; }
     }
 }
