@@ -33,7 +33,7 @@ builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Str
 
 builder.Services.AddTransient<IBookService, BookService>();
 builder.Services.AddTransient<IOrderService, OrderService>();
-
+builder.Services.AddTransient<IFoodPartnerService, FoodPartnerService>();
 
 builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
 

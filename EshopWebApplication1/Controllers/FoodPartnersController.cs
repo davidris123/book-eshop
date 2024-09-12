@@ -7,22 +7,24 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Eshop.DomainEntities.Domain;
 using EshopWebApplication1.Data;
+using Eshop.Service.Interface;
 
 namespace EshopWebApplication1.Controllers
 {
     public class FoodPartnersController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IFoodPartnerService _service;
 
-        public FoodPartnersController(ApplicationDbContext context)
+        public FoodPartnersController(IFoodPartnerService service)
         {
-            _context = context;
+            _service = service;
         }
 
+
         // GET: FoodPartners
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.FoodPartner.ToListAsync());
+            return View(_service.GetFoodPartnerList());
         }
     }
 }
