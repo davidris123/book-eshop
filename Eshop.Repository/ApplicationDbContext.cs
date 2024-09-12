@@ -1,4 +1,5 @@
 ﻿using Eshop.DomainEntities;
+using Eshop.DomainEntities.Domain;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,5 +15,6 @@ namespace EshopWebApplication1.Data
 
         public DbSet<BooksInOrder> BooksInOrders { get; set; }
         public DbSet<EmailMessage> EmailMessages { get; set; }
+        public DbSet<FoodPartner> FoodPartner { get; set; }
     }
 }
