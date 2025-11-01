@@ -4,7 +4,7 @@ Book Store
 Overview
 ----------
 
-**Book Store** is a online book e-shop developed with **.NET 8** using the **Model-View-Controller (MVC)** pattern. It strictly adheres to the **Onion Architecture** principles to achieve separation of concerns, testability, and a clean codebase. **Microsoft SQL Server** is utilized for data persistence, managed through **Entity Framework Core**.
+**Book Store** is a online book e-shop developed with **.NET 8** using the **Model-View-Controller (MVC)** pattern. It strictly adheres to the **Onion Architecture** principles to achieve separation of concerns, testability, and a clean codebase. **Microsoft SQL Server** is utilized for data persistence, managed through **Entity Framework Core**. Remember that you need to change the API key for Stripe as it's blank
 
 * * * * *
 
@@ -51,6 +51,14 @@ The solution is structured into distinct projects corresponding to the Onion Arc
 3.  **Eshop.Web:** The outermost layer (**ASP.NET Core MVC**). Contains **Controllers**, **Views**, and sets up the application host and Dependency Injection.
 
 * * * * *
+
+![A screenshot of the application's main dashboard](.github/images/home.png)
+![A screenshot of the application's profile page](.github/images/profile.png)
+![A screenshot of the application's register page](.github/images/register.png)
+![A screenshot of the application's store page](.github/images/store.png)
+![A screenshot of the application's shopping cart page](.github/images/shop_cart.png)
+![A screenshot of the application's payment page](.github/images/stripe.png)
+
 
 Getting Started
 ------------------
