@@ -97,7 +97,7 @@ Getting Started
     Bash / .NET CLI
 
     ```
-    dotnet ef database update --project BookVerse.Infrastructure --startup-project BookVerse.Web
+    dotnet ef database update --project Eshop.Repository --startup-project Eshop.Web
 
     ```
 
@@ -114,12 +114,16 @@ Getting Started
 
     Start the MVC web project:
 
-    Bash
+    Bash / .NET CLI
 
     ```
-    dotnet run --project BookVerse.Web
-
+    dotnet run --project Eshop.Web
     ```
 
-    The application will typically launch and be accessible at `https://localhost:7001`.
+    In Visual Studio 2022
+    
+    ```
+    Clone the repository and click on start. Make sure to not accept the SSL certificate
+    ```
+    
 
